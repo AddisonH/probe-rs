@@ -56,11 +56,11 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
-      start: 0x2e07400
-      end: 0x2e07694
+      start: 0x2e07600
+      end: 0x2e17934
     cores:
     - cpu0
     - cpu1
@@ -166,11 +166,11 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
-      start: 0x2e07400
-      end: 0x2e07694
+      start: 0x2e07600
+      end: 0x2e17934
     cores:
     - cpu0
     - cpu1
@@ -276,11 +276,11 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
-      start: 0x2e07400
-      end: 0x2e07694
+      start: 0x2e07600
+      end: 0x2e17934
     cores:
     - cpu0
     - cpu1
@@ -386,11 +386,11 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
-      start: 0x2e07400
-      end: 0x2e07694
+      start: 0x2e07600
+      end: 0x2e17934
     cores:
     - cpu0
     - cpu1
@@ -483,11 +483,11 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
-      start: 0x2e07400
-      end: 0x2e07694
+      start: 0x2e07600
+      end: 0x2e17934
     cores:
     - main
     access:
@@ -557,11 +557,11 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
-      start: 0x2e07400
-      end: 0x2e07694
+      start: 0x2e07600
+      end: 0x2e17934
     cores:
     - main
     access:
@@ -631,11 +631,11 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
-      start: 0x2e07400
-      end: 0x2e07694
+      start: 0x2e07600
+      end: 0x2e17934
     cores:
     - main
     access:
@@ -705,11 +705,11 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
-      start: 0x2e07400
-      end: 0x2e07694
+      start: 0x2e07600
+      end: 0x2e17934
     cores:
     - main
     access:
@@ -792,11 +792,11 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
-      start: 0x2e07400
-      end: 0x2e07694
+      start: 0x2e07600
+      end: 0x2e17934
     cores:
     - cpu0
     - cpu1
@@ -891,11 +891,11 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
-      start: 0x2e07400
-      end: 0x2e07694
+      start: 0x2e07600
+      end: 0x2e17934
     cores:
     - cpu0
     - cpu1
