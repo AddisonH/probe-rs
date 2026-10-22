@@ -45,7 +45,7 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
+  - !Nvm
     name: Config
     range:
       start: 0x2c9f040
@@ -56,7 +56,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
       start: 0x2e07600
@@ -67,7 +67,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: SiP_Flash
     range:
       start: 0x8000000
@@ -144,7 +144,7 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
+  - !Nvm
     name: Config
     range:
       start: 0x2c9f040
@@ -155,7 +155,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
       start: 0x2e07600
@@ -243,7 +243,7 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
+  - !Nvm
     name: Config
     range:
       start: 0x2c9f040
@@ -254,7 +254,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
       start: 0x2e07600
@@ -265,7 +265,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: SiP_Flash
     range:
       start: 0x8000000
@@ -342,7 +342,7 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
+  - !Nvm
     name: Config
     range:
       start: 0x2c9f040
@@ -353,7 +353,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
       start: 0x2e07600
@@ -429,7 +429,7 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
+  - !Nvm
     name: Config
     range:
       start: 0x2c9f040
@@ -439,7 +439,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
       start: 0x2e07600
@@ -493,7 +493,7 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
+  - !Nvm
     name: Config
     range:
       start: 0x2c9f040
@@ -503,7 +503,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
       start: 0x2e07600
@@ -557,7 +557,7 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
+  - !Nvm
     name: Config
     range:
       start: 0x2c9f040
@@ -567,7 +567,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
       start: 0x2e07600
@@ -621,7 +621,7 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
+  - !Nvm
     name: Config
     range:
       start: 0x2c9f040
@@ -631,7 +631,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
       start: 0x2e07600
@@ -697,7 +697,7 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
+  - !Nvm
     name: Config
     range:
       start: 0x2c9f040
@@ -708,7 +708,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
       start: 0x2e07600
@@ -785,7 +785,7 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
+  - !Nvm
     name: Config
     range:
       start: 0x2c9f040
@@ -796,7 +796,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: OTP_Config
     range:
       start: 0x2e07600

@@ -527,10 +527,12 @@ pub(crate) fn get_mem_map(device: &Device, cores: &[probe_rs_target::Core]) -> V
             p_name: memory.p_name.clone(),
             memory_type: if memory.default && memory.access.read && memory.access.write {
                 MemoryType::Ram
-            } else if memory.default
-                && memory.access.read
-                && memory.access.execute
-                && !memory.access.write
+            } else if !memory.access.write
+                && ((memory.default && memory.access.read && memory.access.execute)
+                    || device.algorithms.iter().any(|algo| {
+                        algo.start <= memory.start
+                            && memory.start + memory.size <= algo.start + algo.size
+                    }))
             {
                 MemoryType::Nvm
             } else {

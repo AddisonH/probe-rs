@@ -34,7 +34,7 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
+  - !Nvm
     name: ConfigROM
     range:
       start: 0x300a100
@@ -44,7 +44,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: ConfigROM_S
     range:
       start: 0x300a200
@@ -70,7 +70,7 @@ variants:
       end: 0x220e0000
     cores:
     - main
-  - !Generic
+  - !Nvm
     name: DataFlash
     range:
       start: 0x27000000
@@ -80,7 +80,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: DataFlash_Config
     range:
       start: 0x27030080
@@ -119,7 +119,7 @@ variants:
     access:
       write: false
       boot: true
-  - !Generic
+  - !Nvm
     name: ConfigROM
     range:
       start: 0x300a100
@@ -129,7 +129,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: ConfigROM_S
     range:
       start: 0x300a200
@@ -155,7 +155,7 @@ variants:
       end: 0x220e0000
     cores:
     - main
-  - !Generic
+  - !Nvm
     name: DataFlash
     range:
       start: 0x27000000
@@ -165,7 +165,7 @@ variants:
     access:
       write: false
       execute: false
-  - !Generic
+  - !Nvm
     name: DataFlash_Config
     range:
       start: 0x27030080
