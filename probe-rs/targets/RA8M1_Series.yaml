@@ -7,7 +7,7 @@ chip_detection:
   target_id: 0x3b0
   mcu_pn_base: 0x130080f0
 generated_from_pack: true
-pack_file_release: 6.4.0
+pack_file_release: 6.6.0
 variants:
 - name: R7FA8M1AF
   cores:
@@ -139,6 +139,32 @@ variants:
       write: false
       execute: false
   - !Generic
+    name: ITCM_NS
+    range:
+      start: 0x10000000
+      end: 0x10010000
+    cores:
+    - main
+  - !Generic
+    name: Flash_NS
+    range:
+      start: 0x12000000
+      end: 0x121f8000
+    cores:
+    - main
+    access:
+      write: false
+  - !Generic
+    name: ConfigROM_NS
+    range:
+      start: 0x1300a100
+      end: 0x1300a200
+    cores:
+    - main
+    access:
+      write: false
+      execute: false
+  - !Generic
     name: DTCM
     range:
       start: 0x20000000
@@ -169,6 +195,32 @@ variants:
     range:
       start: 0x27030080
       end: 0x27030360
+    cores:
+    - main
+    access:
+      write: false
+      execute: false
+  - !Generic
+    name: DTCM_NS
+    range:
+      start: 0x30000000
+      end: 0x30010000
+    cores:
+    - main
+    access:
+      execute: false
+  - !Generic
+    name: SRAM_NS
+    range:
+      start: 0x32000000
+      end: 0x320e0000
+    cores:
+    - main
+  - !Generic
+    name: DataFlash_NS
+    range:
+      start: 0x37000000
+      end: 0x37003000
     cores:
     - main
     access:

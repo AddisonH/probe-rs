@@ -8,7 +8,7 @@ chip_detection:
   reverse_string: true
   mcu_pn_base: 0x10080f0
 generated_from_pack: true
-pack_file_release: 6.4.0
+pack_file_release: 6.6.0
 variants:
 - name: R7FA6E2B9
   cores:
