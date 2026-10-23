@@ -86,7 +86,7 @@ where
     let registry = Registry::from_builtin_families();
     let currently_supported_chip_families = registry.families();
 
-    for (device_name, device) in devices {
+    for (device_name, mut device) in devices {
         if only_supported_families
             && !currently_supported_chip_families
                 .iter()
@@ -120,32 +120,28 @@ where
         };
 
         // Extract the flash algorithm, block & sector size and the erased byte value from the ELF binary.
-        let flash_algorithm_names = device
-            .algorithms
-            .iter()
-            .filter_map(|flash_algorithm| {
-                match process_flash_algo(flash_algorithm, &mut kind) {
-                    Ok(algo) => {
-                        // We add this algo directly to the algos of the family if it's not already added.
-                        // Make sure we never add an algo twice to save file size.
-                        let algo_name = algo.name.clone();
-                        if !family.flash_algorithms.contains(&algo) {
-                            family.flash_algorithms.push(algo);
-                        }
-
-                        Some(algo_name)
+        let mut flash_algorithm_names = Vec::new();
+        device.algorithms.retain(|flash_algorithm| {
+            match process_flash_algo(flash_algorithm, &mut kind) {
+                Ok(algo) => {
+                    // We add this algo directly to the algos of the family if it's not already added.
+                    // Make sure we never add an algo twice to save file size.
+                    flash_algorithm_names.push(algo.name.clone());
+                    if !family.flash_algorithms.contains(&algo) {
+                        family.flash_algorithms.push(algo);
                     }
-                    Err(e) => {
-                        log::warn!(
-                            "Failed to process flash algorithm {}.",
-                            flash_algorithm.file_name.display()
-                        );
-                        log::warn!("Reason: {e:?}");
-                        None
-                    }
+                    true
                 }
-            })
-            .collect::<Vec<_>>();
+                Err(e) => {
+                    log::warn!(
+                        "Failed to process flash algorithm {}.",
+                        flash_algorithm.file_name.display()
+                    );
+                    log::warn!("Reason: {e:?}");
+                    false
+                }
+            }
+        });
 
         // Sometimes the algos are referenced twice, for example in the multicore H7s
         // Deduplicate while keeping order.
